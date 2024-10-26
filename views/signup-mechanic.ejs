@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mechanics Signup</title>
+  <link rel="stylesheet" href="/css/mechanic.css"> <!-- Link to the CSS file -->
+</head>
+<body>
+
+  <div class="mechanics-signup-container">
+    <h2>Signup for Mechanics</h2>
+    <form action="/signup-mechanic" method="POST">
+      <input type="text" name="name" placeholder="Mechanic Name" required>
+      <input type="text" name="address" placeholder="Address" required>
+      <input type="text" name="phone" placeholder="Phone Number" required>
+      <button type="submit">Signup</button>
+    </form>
+    <p>Already a mechanic? <a href="/mechanics">View Mechanics</a></p>
+  </div>
+
+</body>
+</html>

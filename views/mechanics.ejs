@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mechanics</title>
+  <style>
+    /* Basic styling for mechanics list */
+    body {
+      font-family: Arial, sans-serif;
+      background: linear-gradient(to right, #f4f4f4, #e0e0e0);
+      padding: 20px;
+      color: #333;
+    }
+
+    h1 {
+      text-align: center;
+      color: #b2b10d;
+      margin-bottom: 30px;
+    }
+
+    .mechanic-card {
+      background-color: #fff;
+      border-radius: 8px;
+      box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+      padding: 20px;
+      margin: 15px;
+      transition: transform 0.2s;
+      display: inline-block;
+      width: calc(33% - 40px); /* 3 cards in a row */
+      box-sizing: border-box;
+    }
+
+    .mechanic-card:hover {
+      transform: scale(1.05);
+    }
+
+    .mechanic-name {
+      font-size: 1.5rem; /* Increased size for better visibility */
+      font-weight: bold;
+      color: #b2b10d;
+    }
+
+    .mechanic-details {
+      margin-top: 10px;
+      font-size: 1.1rem; /* Increased size for better visibility */
+    }
+
+    @media (max-width: 768px) {
+      .mechanic-card {
+        width: calc(50% - 40px); /* 2 cards in a row for smaller screens */
+      }
+    }
+
+    @media (max-width: 480px) {
+      .mechanic-card {
+        width: 100%; /* 1 card in a row for mobile */
+      }
+    }
+
+    a {
+      text-decoration: none;
+      color: #b2b10d;
+      display: block;
+      text-align: center;
+      margin-top: 30px;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Mechanics List</h1>
+
+  <div class="mechanics-container">
+    <% mechanics.forEach(function(mechanic) { %>
+      <div class="mechanic-card">
+        <div class="mechanic-name"><%= mechanic.name %></div>
+        <div class="mechanic-details">Address: <%= mechanic.address %></div>
+        <div class="mechanic-details">Phone: <%= mechanic.phone %></div>
+      </div>
+    <% }); %>
+  </div>
+
+  <a href="/new">Back to Home</a>
+
+</body>
+</html>
